@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+</head>
+<body>
+{% if ticket_number %}
+  <div>Your number is {{ ticket_number }}</div>
+{% endif %}
+{% if minutes_to_wait %}
+  <div>Please wait around {{ minutes_to_wait }} minutes</div>
+{% else %}
+    <div>Please wait around 0 minutes</div>
+{% endif %}
+<br><br>
+<a href="{% url 'menu' %}">Menu</a>
+</body>
+</html>
